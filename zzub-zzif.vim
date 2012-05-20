@@ -10,7 +10,7 @@ endfunction
 
 " 探索用の正規表現を決定する
 function! s:GetPattern(inList)
-  return join(map(copy(a:inList), 'get(s:map, v:val)'), 'A\{-}')
+  return join(map(copy(a:inList), 'get(s:map, v:val)'), 'A*')
 endfunction
 
 function! s:GetMinLen(inList)
